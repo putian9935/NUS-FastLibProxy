@@ -1,6 +1,5 @@
 chrome.tabs.onUpdated.addListener(function
     (tabId, changeInfo, tab) {
-     if (changeInfo.status == 'complete') {
         if(tab.url.substr(0, "https://proxylogin.nus.edu.sg/libproxy1/public/login.asp".length) == "https://proxylogin.nus.edu.sg/libproxy1/public/login.asp") {
             // Change correspondingly if you're in other domains
             chrome.tabs.executeScript(tabId, {code : 'document.querySelector("select").value = "NUSSTU"; '});
@@ -14,6 +13,5 @@ chrome.tabs.onUpdated.addListener(function
         if(tab.url.substr(0, "https://proxylogin.nus.edu.sg/libproxy1/public/aup.asp".length) == "https://proxylogin.nus.edu.sg/libproxy1/public/aup.asp") {
             chrome.tabs.executeScript(tabId, {code : 'document.getElementsByTagName("input")[1].click();'});
         }
-    }
     }
   );
