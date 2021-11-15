@@ -7,7 +7,7 @@ chrome.tabs.onUpdated.addListener(function
             // Change USERNAME to your studentID, e1234567, e.g.
             chrome.tabs.executeScript(tabId, {code : 'document.forms[1].user.value ="USERNAME";'});
             // Change PASSWORD to your password yo login
-            chrome.tabs.executeScript(tabId, {code : 'document.forms[1].pass.value ="PASSWORD;";'});
+            chrome.tabs.executeScript(tabId, {code : 'document.forms[1].pass.value ="PASSWORD";'});
             chrome.tabs.executeScript(tabId, {code : 'document.forms[1].submit();'});        
         }
 
