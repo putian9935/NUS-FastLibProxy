@@ -2,13 +2,16 @@
     "name": "NUS-FastLibProxy",
     "description": "An extension that saves time logging into the NUS libproxy",
     "version": "1",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "background": {
-        "scripts":["background.js"]
+        "service_worker": "background.js"
       },
     "permissions": [
       "tabs",
-      "http://*/",
-      "https://*/"
+      "scripting"
+    ],
+    "host_permissions": [
+        "http://proxylogin.nus.edu.sg/",
+        "https://proxylogin.nus.edu.sg/"
     ]
   }
